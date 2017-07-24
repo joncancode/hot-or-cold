@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header'
+import GuessBox from './components/GuessBox'
 import logo from './logo.svg';
 import './App.css';
 
@@ -8,10 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <div>Make Your Guess</div>
-        <div>Text box</div>
-        <div>Button</div>
-        <div>Past Guesses</div>
+          <GuessBox/>
       </div>
     );
   }
