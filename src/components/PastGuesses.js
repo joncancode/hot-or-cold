@@ -7,7 +7,7 @@ class GuessInput extends Component {
     render() {
         return (
             <div className="past-guesses">
-                <p>50</p>
+                <span className="past-numbers">50</span>
             </div>
     );
     }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GuessResponse from './GuessResponse'
 import GuessInput from './GuessInput'
-import GuessInput from './PastGuesses'
+import PastGuesses from './PastGuesses'
 
 
 import './GuessBox.css';

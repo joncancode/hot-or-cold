@@ -7,9 +7,12 @@ class Header extends Component {
     render() {
         return (
             <header>
+                <nav>
                 <button className="what">What?</button>
                 <button className="new">+ New Game</button>
-                <h1>Hot or Cold</h1>
+                </nav>
+                <br/>
+                <h1 className="gameName">Hot or Cold</h1>
             </header>
     );
     }

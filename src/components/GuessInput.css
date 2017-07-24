@@ -1,0 +1,23 @@
+.guess-input {
+
+    padding: 30px;
+
+}
+
+.guess-input button {
+
+    margin-top: 30px;
+    background-color: #2B3856;
+    color: white;
+}
+
+button:hover {
+    color: lightgreen;
+    background-color: #C35817;
+    transition-duration: 2s;
+}
+
+input[type=text] {
+    background-color: #E1EAFF;
+    text-align: center;
+}

@@ -7,10 +7,11 @@ class GuessInput extends Component {
     render() {
         return (
             <div className="guess-input">
-                <form>
-                    <input type = "text" placeholder = "guess">
-                    <input type="submit" value="Submit">
-                </form>
+               
+                    <input type = "text" placeholder = "Make a guess" />
+                    <br/>
+                    <button type="submit" value="Submit"> GUESS </button>
+               
             </div>
     );
     }

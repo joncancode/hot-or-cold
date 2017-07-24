@@ -1,19 +1,39 @@
+container{
+    background-color: #0A0042
+}
+
 button:hover {
     color: lightgreen;
+    background-color: #C35817;
+    transition-duration: 2s;
 }
 
 button {
     font-size: 20px;
+    padding: 10px;
+    border: 0px;
 }
 
  .what {
     float: left;
+    color: white;
+    background-color: transparent;
+    border-radius: 5px;
 }
 
  .new {
     float: right;
+    color: white;
+    background-color: transparent;
+    border-radius: 5px;
 }
 
-h1 {
-    margin-top: 100px;
+.gameName {
+    margin-top: 75px;
+    color: white;
+}
+
+nav {
+        clear: all;
+    margin-top:10px;
 }

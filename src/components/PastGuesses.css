@@ -1,0 +1,14 @@
+.past-guesses {
+
+    background-color: #46C7C7;
+    padding: 30px;
+}
+
+.past-guesses .past-numbers {
+
+    padding: 7px;
+    background-color: blue;
+    color: white;
+    border-radius: 3px;
+
+}
