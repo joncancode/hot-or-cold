@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import GuessResponse from './components/GuessResponse';
 import GuessInput from './components/GuessInput';
-import NumberOfGuesses from './components/NumberOfGuesses';
 import PastGuesses from './components/PastGuesses';
 
 import './App.css';
@@ -19,6 +18,19 @@ class App extends Component {
       ],
       gameState: 'start'
     };
+  }
+
+  changeNumber(e) {
+    this.setState({
+    numberInput: e.target.value
+    });
+  }
+
+  submitNumber(e) {
+    e.preventDefault();
+    // this.setState({
+    // numberInput: e.target.value
+    // });
   }
 
   resetGame() {
@@ -43,22 +55,21 @@ class App extends Component {
   //   };
 
   render() {
-
-    console.log(GuessInput)
+    console.log(GuessInput);
     return (
-
       <div className="App">
         <Header />
 
         <div className="guess-box">
           <GuessResponse />
-          <GuessInput />
-          <NumberOfGuesses />
+          <GuessInput onChange={e=> this.changeNumber(e)} 
+            onSubmit={e=> this.submitNumber(e)} name="numberInput" value={this.state.numberInput} />
           <PastGuesses />
         </div>
       </div>
     );
   }
 }
+
 
 export default App;
