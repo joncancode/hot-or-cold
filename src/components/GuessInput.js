@@ -21,8 +21,8 @@ export default function GuessInput(props) {
         </button>
       </form>
 
-      <h2>
-        Guess # {props.listOfGuesses}{' '}
+      <h2 >
+        Guess # {props.guessCount + 1}{' '}
       </h2>
     </div>
   );

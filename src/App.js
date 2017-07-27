@@ -72,8 +72,10 @@ class App extends Component {
             onChange={e=> this.changeNumber(e)} 
             onSubmit={e => this.submitNumber(e)} 
             name="numberInput" 
-            value={this.state.numberInput} />
-          <PastGuesses />
+            value={this.state.numberInput} 
+            guessCount={this.state.listOfGuesses.length}
+            />
+          <PastGuesses listOfGuesses={this.state.listOfGuesses} />
         </div>
       </div>
     );
