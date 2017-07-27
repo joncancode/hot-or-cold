@@ -30,9 +30,11 @@ class App extends Component {
   submitNumber(e) {
     e.preventDefault();
     console.log('working')
-    // this.setState({
-    // numberInput: e.target.value
-    // });
+    this.setState({
+    listOfGuesses: [
+      ...this.state.listOfGuesses, this.state.numberInput
+]
+    });
   }
 
   resetGame() {
@@ -66,8 +68,11 @@ class App extends Component {
 
         <div className="guess-box">
           <GuessResponse />
-          <GuessInput onChange={e=> this.changeNumber(e)} 
-            onSubmit={this.submitNumber} name="numberInput" value={this.state.numberInput} />
+          <GuessInput 
+            onChange={e=> this.changeNumber(e)} 
+            onSubmit={e => this.submitNumber(e)} 
+            name="numberInput" 
+            value={this.state.numberInput} />
           <PastGuesses />
         </div>
       </div>
