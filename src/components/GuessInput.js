@@ -5,7 +5,7 @@ import './GuessInput.css';
 export default function GuessInput(props) {
   return (
     <div className="guess-input">
-      <form>
+      <form onSubmit={props.onSubmit}>
         <input
           type="number"
           name="numberInput"
@@ -16,7 +16,7 @@ export default function GuessInput(props) {
           required
         />
         <br />
-        <button type="submit" onSubmit={props.onSubmit} value="Submit">
+        <button type="submit" value="Submit">
           {' '}TAKE A GUESS{' '}
         </button>
       </form>

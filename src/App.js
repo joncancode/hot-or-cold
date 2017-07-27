@@ -11,6 +11,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      answer: Math.floor(Math.random() * 100) + 1,
       numberInput: '',
       listOfGuesses: [
         // ...this.state.athleteInfo,
@@ -28,6 +29,7 @@ class App extends Component {
 
   submitNumber(e) {
     e.preventDefault();
+    console.log('working')
     // this.setState({
     // numberInput: e.target.value
     // });
@@ -35,10 +37,12 @@ class App extends Component {
 
   resetGame() {
     this.setState({
-      //listOfGuesses: [],
-      gameState: 'start'
+      listOfGuesses: [],
+      gameState: 'start',
+      answer: Math.floor(Math.random() * 100) + 1
     });
   }
+
 
   // onSubmit = e => {
   //     e.preventDefault();
@@ -63,7 +67,7 @@ class App extends Component {
         <div className="guess-box">
           <GuessResponse />
           <GuessInput onChange={e=> this.changeNumber(e)} 
-            onSubmit={e=> this.submitNumber(e)} name="numberInput" value={this.state.numberInput} />
+            onSubmit={this.submitNumber} name="numberInput" value={this.state.numberInput} />
           <PastGuesses />
         </div>
       </div>
