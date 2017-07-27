@@ -40,14 +40,12 @@ class App extends Component {
       //alert("You win!")
       this.resetGame();
     } 
-    if (numberInput > answer.toString(numberInput, answer)) {
+    if (numberInput > answer.toString()) {
       console.log('lower but we\'re outside setstate')
-      this.setState({
-
-
-      distanceAway: "need to set"
-
-      })
+     
+      // this.setState({
+      // distanceAway: "need to set"
+      //})
       
     }
     if (numberInput < answer.toString()) {
