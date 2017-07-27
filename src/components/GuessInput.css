@@ -9,6 +9,7 @@
     margin-top: 30px;
     background-color: #2B3856;
     color: white;
+    border-radius: 14px;
 }
 
 button:hover {
@@ -17,7 +18,9 @@ button:hover {
     transition-duration: 2s;
 }
 
-input[type=text] {
+input[type=number] {
+    
     background-color: #E1EAFF;
     text-align: center;
+    font-size: 30px;
 }

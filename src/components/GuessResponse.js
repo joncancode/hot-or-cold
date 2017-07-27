@@ -5,7 +5,9 @@ import './GuessResponse.css';
 export default function GuessResponse(props) {
   return (
     <div className="guess-response">
-      <p>Kinda Hot</p>
+      <p>
+        {props.onSubmit}
+      </p>
     </div>
   );
 }
