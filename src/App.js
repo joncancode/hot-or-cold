@@ -14,7 +14,7 @@ class App extends Component {
       answer: Math.floor(Math.random() * 100) + 1,
       numberInput: '',
       listOfGuesses: [],
-      gameState: 'start'
+      distanceAway: ''
     };
   }
 
@@ -40,10 +40,18 @@ class App extends Component {
       //alert("You win!")
       this.resetGame();
     } 
-    if (numberInput > answer.toString()) {
-      console.log('answer is lower')
+    if (numberInput > answer.toString(numberInput, answer)) {
+      console.log('lower but we\'re outside setstate')
+      this.setState({
+
+
+      distanceAway: "need to set"
+
+      })
+      
     }
     if (numberInput < answer.toString()) {
+
       console.log('answer is higher')
     }
   }
@@ -52,7 +60,6 @@ class App extends Component {
   resetGame() {
     this.setState({
       listOfGuesses: [],
-      gameState: 'start',
       answer: Math.floor(Math.random() * 100) + 1
     });
   }
@@ -73,7 +80,8 @@ class App extends Component {
 
         <div className="guess-box">
           <GuessResponse 
-          onSubmit={e => this.submitNumber(e)}
+          onSubmit={e => this.answerCorrectly(e)}
+         
           />
 
           <GuessInput
@@ -83,6 +91,7 @@ class App extends Component {
             value={this.state.numberInput}
             guessCount={this.state.listOfGuesses.length}
           />
+
 
           <PastGuesses listOfGuesses={this.state.listOfGuesses} />
         </div>

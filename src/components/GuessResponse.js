@@ -6,7 +6,7 @@ export default function GuessResponse(props) {
   return (
     <div className="guess-response">
       <p>
-        {props.onSubmit}
+        {props.answerCorrectly}
       </p>
     </div>
   );
