@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './GuessResponse.css';
 
-
-class GuessResponse extends Component {
-    render() {
-        return (
-            <div className="guess-response">
-                <p>Kinda Hot</p>
-            </div>
-    );
-    }
+export default function GuessResponse(props) {
+  return (
+    <div className="guess-response">
+      <p>Kinda Hot</p>
+    </div>
+  );
 }
-
-export default GuessResponse;

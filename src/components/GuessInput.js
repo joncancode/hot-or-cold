@@ -1,20 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './GuessInput.css';
 
-
-class GuessInput extends Component {
-    render() {
-        return (
-            <div className="guess-input">
-               
-                    <input type = "text" placeholder = "Make a guess" />
-                    <br/>
-                    <button type="submit" value="Submit"> GUESS </button>
-               
-            </div>
-    );
-    }
+export default function GuessInput(props) {
+  return (
+    <form className="guess-input">
+      <input 
+        type="number"
+        name="numberInput"
+        placeholder="Make a guess"
+        //onChange={this.props.onChangeValue}
+        //value={this.props.numberInput}
+        required
+      />
+      <br />
+      <button type="submit" value="Submit">
+        {' '}TAKE A GUESS{' '}
+      </button>
+    </form>
+  );
 }
-
-export default GuessInput;

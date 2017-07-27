@@ -26,3 +26,12 @@
 body {
   background-color:  #2B3856;
 }
+
+.guess-box {
+    background-color: #737CA1;
+    max-width: 27%;
+    margin: 0 auto;
+
+    border-radius: 3px;
+    border: solid black 1px;
+}
