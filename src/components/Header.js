@@ -6,8 +6,8 @@ export default function Header(props) {
   return (
     <header>
       <nav>
-        <button className="what" onMouseUp={props.onMouseUp} >What?</button>
-        <button className="new" onClick={props.onClick}>+ New Game</button>
+        <button className="what" onClick={props.onClickWhat} >What?</button>
+        <button className="new" onClick={props.onClickNew}>+ New Game</button>
       </nav>
       <br />
       <h1 className="gameName">Hot or Cold</h1>

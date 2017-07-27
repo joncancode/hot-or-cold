@@ -5,6 +5,10 @@ import GuessResponse from './components/GuessResponse';
 import GuessInput from './components/GuessInput';
 import PastGuesses from './components/PastGuesses';
 
+import {checkDistance} from './helper/checkDistance'
+
+//import {answerCorrectly} from './answerCorrectly'
+//functions are first class citizens - values
 import './App.css';
 
 class App extends Component {
@@ -27,7 +31,8 @@ class App extends Component {
   submitNumber(e) {
     e.preventDefault();
     this.setState({
-      listOfGuesses: [...this.state.listOfGuesses, this.state.numberInput]
+      listOfGuesses: [...this.state.listOfGuesses, this.state.numberInput], 
+      distanceAway: checkDistance(this.state.numberInput, this.state.answer)
     });
     this.answerCorrectly(this.state.numberInput, this.state.answer);
   }
@@ -35,17 +40,13 @@ class App extends Component {
   answerCorrectly(numberInput, answer) {
     console.log('numberinput', numberInput);
     console.log('answer', answer);
-    if (numberInput === answer.toString()) {
+    if (Number(numberInput) === answer) {
       console.log('game restarted');
       //alert("You win!")
       this.resetGame();
     } 
     if (numberInput > answer.toString()) {
       console.log('lower but we\'re outside setstate')
-     
-      // this.setState({
-      // distanceAway: "need to set"
-      //})
       
     }
     if (numberInput < answer.toString()) {
@@ -72,8 +73,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header
-          onClick={e => this.resetGame(e)}
-          onMouseUp={e => this.whatClicked(e)}
+          onClickNew={e => this.resetGame(e)}
+          onClickWhat={e => this.whatClicked(e)}
         />
 
         <div className="guess-box">
