@@ -41,17 +41,11 @@ class App extends Component {
     console.log('numberinput', numberInput);
     console.log('answer', answer);
     if (Number(numberInput) === answer) {
-      console.log('game restarted');
-      //alert("You win!")
-      this.resetGame();
-    } 
-    if (numberInput > answer.toString()) {
-      console.log('lower but we\'re outside setstate')
-      
-    }
-    if (numberInput < answer.toString()) {
 
-      console.log('answer is higher')
+      this.resetGame()
+    } 
+    else {
+      console.log("keep trying") 
     }
   }
 
@@ -79,7 +73,7 @@ class App extends Component {
 
         <div className="guess-box">
           <GuessResponse 
-          onSubmit={e => this.answerCorrectly(e)}
+          onSubmit={e => this.checkDistance(e)}
          
           />
 

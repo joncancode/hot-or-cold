@@ -1,6 +1,8 @@
 .guess-response {
     background-color: #C24641;
     color: white;
+    border-radius: 15px;
+    padding: 3px;
 }
 
 p {

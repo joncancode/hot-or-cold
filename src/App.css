@@ -29,9 +29,10 @@ body {
 
 .guess-box {
     background-color: #737CA1;
-    max-width: 27%;
+    padding: 3px;
+    max-width: 35%;
     margin: 0 auto;
 
     border-radius: 3px;
-    border: solid black 1px;
+    border: solid black 4px;
 }
